@@ -11,8 +11,17 @@ const Slider: React.FC<Props> = ({ data }) => {
   return (
     <Carousel autoPlay infiniteLoop stopOnHover={false} showThumbs={false}>
       {data.map((item: string, index: number) => (
-        <div key={index}>
-          <img src={item} alt={`image ${index + 1}`} />
+        <div
+          key={index}
+          className="justify-center items-center rounded-md overflow-hidden"
+        >
+          <Image
+            src={item}
+            alt={`image ${index + 1}`}
+            className="w-60 h-60 object-cover rounded-md"
+            width={700}
+            height={400}
+          />
         </div>
       ))}
     </Carousel>

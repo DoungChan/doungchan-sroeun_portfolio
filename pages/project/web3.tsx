@@ -28,9 +28,10 @@ const web3: React.FC = () => {
         <link rel="icon" href="/profile.png" />
       </Head>
       <div className="flex flex-col m-8">
-        <section className="flex flex-col w-full">
+        <h1 className="text-3xl dark:text-teal-400 font-bold">Project</h1>
+        <section className="flex flex-col w-full my-10 md:my-4">
           <div className="flex flex-col md:flex-row lg:flex-row gap-5">
-            <div className="flex flex-col justify-center items-center md:w-full h-[400px] rounded-lg lg:w-1/2">
+            <div className="flex flex-col justify-center items-center md:w-full rounded-lg lg:w-1/2 overflow-hidden">
               <Slider data={data} />
             </div>
             <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
@@ -56,7 +57,7 @@ const web3: React.FC = () => {
 
         <section className="w-full mt-4">
           <div className="flex justify-center items-center h-full">
-            <SwiperComponent slide_img={slide_img} />
+            <SwiperComponent slide_img={slide_img} slidesPerView={4} />
           </div>
         </section>
       </div>

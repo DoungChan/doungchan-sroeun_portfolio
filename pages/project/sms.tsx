@@ -30,23 +30,23 @@ const web3 = () => {
         <link rel="icon" href="/profile.png" />
       </Head>
       <div className="flex flex-col m-8">
+        <h1 className="text-3xl text-teal-400 font-bold md:mb-4">Project</h1>
         <section className="flex flex-col w-full">
-          <div className="flex flex-col md:flex-row lg:flex-row gap-5">
-            <div className="flex flex-col justify-center items-center md:w-full h-[400px] rounded-lg lg:w-1/2">
+          <div className="flex flex-col md:flex-row lg:flex-row md:gap-5 my-10 md:my-3">
+            <div className="flex flex-col justify-center md:w-full rounded-lg lg:w-1/2">
               <Slider data={data} />
             </div>
             <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
               <h1 className="text-xl dark:text-teal-400 font-bold">
-                Web 3.0 Trading Bot Market Place
+                School management system
               </h1>
               <line className="w-full h-1 bg-gray-500 my-4" />
               <p className="text-gray-500 text-sm">
-                Web 3.0 trading bot marketplace’s objective is to build a
-                marketplace for trading bot that takes similarity to Opensea - a
-                marketplace platform for{" "}
-                <span className="text-teal-500">NFT</span>. Therefore we divided
-                into 3 main sub objectives which are smart contract, frontend
-                and backend developments.
+                School management system is a web application that helps school
+                to manage their student, teacher, class, schedule, attendance,
+                and report. This application is built with React, Typescript,
+                Vite, Tailwindcss, Electron, Nodejs, Express, Postgresql, and
+                Swagger.
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ const web3 = () => {
 
         <section className="w-full mt-10">
           <div className="flex justify-center items-center h-full">
-            <SwiperComponent slide_img={slide_img} />
+            <SwiperComponent slide_img={slide_img} slidesPerView={4} />
           </div>
         </section>
       </div>

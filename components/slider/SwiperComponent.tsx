@@ -10,13 +10,17 @@ SwiperCore.use([Autoplay]);
 
 type SwiperProps = {
   slide_img: string[];
+  slidesPerView: number;
 };
-const SwiperComponent: React.FC<SwiperProps> = ({ slide_img }) => {
-  const duplicatedSlides = [...slide_img, ...slide_img];
+const SwiperComponent: React.FC<SwiperProps> = ({
+  slide_img,
+  slidesPerView,
+}) => {
+  const duplicatedSlides = [...slide_img, ...slide_img, ...slide_img];
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={4}
+      slidesPerView={slidesPerView}
       loop
       autoplay={{ delay: 1500, disableOnInteraction: false }}
       breakpoints={{
@@ -33,7 +37,7 @@ const SwiperComponent: React.FC<SwiperProps> = ({ slide_img }) => {
           slidesPerView: 4,
         },
         1280: {
-          slidesPerView: 5,
+          slidesPerView: slidesPerView,
         },
       }}
     >
