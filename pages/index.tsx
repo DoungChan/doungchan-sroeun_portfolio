@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="md:px-20 lg:px-40">
         <section className="min-h-screen mx-4">
-          <div className="text-center p-10 py-10">
+          <div className="text-center py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               DoungChan Sroeun
             </h2>
@@ -173,11 +173,11 @@ const Home: NextPage = () => {
               }}
             >
               <Image
-                className="absolute rounded-md object-cover ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
+                className="absolute rounded-md object-contain ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={"/flutter.jpg"}
+                src={"/vconnect/qrscreen.png"}
                 alt={"Connection"}
               />
               <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
@@ -186,6 +186,53 @@ const Home: NextPage = () => {
                 </h2>
               </div>
             </div>
+            <div
+              className="relative group basis-1/3 flex-1 overflow-hidden rounded-md cursor-pointer "
+              onClick={() => {
+                router.push("/project/ogp");
+              }}
+            >
+              <Image
+                className="absolute rounded-md object-cover ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={"/ogp/Dashboard month.png"}
+                alt={"Connection"}
+              />
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+                <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
+                  OGP
+                </h2>
+              </div>
+            </div>
+            <div
+              className="relative group basis-1/3 flex-1 overflow-hidden rounded-md cursor-pointer "
+              onClick={() => {
+                router.push("/project/efind");
+              }}
+            >
+              <Image
+                className="absolute rounded-md object-contain ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={"/efind/sign up screen.png"}
+                alt={"Connection"}
+              />
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+                <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
+                  efind
+                </h2>
+              </div>
+            </div>
+            `
+            <div
+              className="relative group basis-1/3 flex-1 overflow-hidden rounded-md cursor-pointer "
+              onClick={() => {
+                router.push("/#");
+              }}
+            ></div>
           </div>
         </section>
       </main>
