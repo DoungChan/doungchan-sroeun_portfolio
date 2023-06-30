@@ -18,9 +18,9 @@ const Slider: React.FC<Props> = ({ data }) => {
           <Image
             src={item}
             alt={`image ${index + 1}`}
-            className="w-60 h-60 object-cover rounded-md"
-            width={700}
-            height={400}
+            className="w-full h-full object-cover rounded-md"
+            width={1000}
+            height={600}
           />
         </div>
       ))}

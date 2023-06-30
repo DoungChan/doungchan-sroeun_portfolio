@@ -2,9 +2,8 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
 import {
-  AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillYoutube,
+  AiFillInstagram,
   AiFillFacebook,
 } from "react-icons/ai";
 
@@ -23,7 +22,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="profile.jpg" />
       </Head>
       <main className="md:px-20 lg:px-40">
-        <section className="min-h-screen mx-4">
+        <section className=" mx-4">
           <div className="text-center py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               DoungChan Sroeun
@@ -35,16 +34,18 @@ const Home: NextPage = () => {
               Freelancer providing services for programming and design content
               needs. Join me down below and let is get cracking!
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-              <a>
-                <AiFillTwitterCircle />
-              </a>
+            <div className="relative text-5xl flex justify-center items-end gap-10 lg:gap-16 py-3 text-gray-600">
               <a href="https://www.linkedin.com/in/doungchan-sroeun-9524a8253/">
                 <AiFillLinkedin />
               </a>
 
               <a href="https://www.facebook.com/doung.chan.3950/">
                 <AiFillFacebook />
+              </a>
+              <a href="https://drive.google.com/file/d/1J_dyTvWR8ISN9FdxMG1RTZDCl4UGN9Sy/view?usp=sharing">
+                <button className="bg-teal-500 text-white text-base px-4 py-2 rounded-lg ">
+                  Resume
+                </button>
               </a>
             </div>
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
@@ -125,7 +126,7 @@ const Home: NextPage = () => {
               both business and consumer use.
             </p>
           </div>
-          <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap  relative overflow-hidden rounded-md cursor-pointer">
+          <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap  relative overflow-hidden rounded-md cursor-pointer ">
             <div
               className="relative group basis-1/3 flex-1 overflow-hidden rounded-md cursor-pointer"
               onClick={() => {
@@ -137,10 +138,10 @@ const Home: NextPage = () => {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={web3logo}
+                src={"/web3/homepage.png"}
                 alt={"Connection"}
               />
-              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
                 <h2 className="text-xl py-2 text-teal-500 font-medium  md:text-3xl">
                   Web 3.0
                 </h2>
@@ -160,7 +161,7 @@ const Home: NextPage = () => {
                 src={"/sms/smshome.png"}
                 alt={"Connection"}
               />
-              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
                 <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
                   School Management System
                 </h2>
@@ -180,7 +181,7 @@ const Home: NextPage = () => {
                 src={"/vconnect/qrscreen.png"}
                 alt={"Connection"}
               />
-              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
                 <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
                   Vconnect
                 </h2>
@@ -200,7 +201,7 @@ const Home: NextPage = () => {
                 src={"/ogp/Dashboard month.png"}
                 alt={"Connection"}
               />
-              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
                 <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
                   OGP
                 </h2>
@@ -220,19 +221,32 @@ const Home: NextPage = () => {
                 src={"/efind/sign up screen.png"}
                 alt={"Connection"}
               />
-              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-500 bg-opacity-30 w-full">
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
                 <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
-                  efind
+                  eFind
                 </h2>
               </div>
             </div>
-            `
             <div
               className="relative group basis-1/3 flex-1 overflow-hidden rounded-md cursor-pointer "
               onClick={() => {
-                router.push("/#");
+                router.push("/project/promokh");
               }}
-            ></div>
+            >
+              <Image
+                className="absolute rounded-md object-cover ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={"/promokh/Homepage.png"}
+                alt={"Connection"}
+              />
+              <div className="absolute bottom-0 justify-center items-center text-white p-4 text-2xl bg-slate-600 bg-opacity-90 w-full">
+                <h2 className="text-md py-2 text-teal-500 font-medium  md:text-3xl">
+                  PromoKh
+                </h2>
+              </div>
+            </div>
           </div>
         </section>
       </main>
